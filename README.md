@@ -22,8 +22,10 @@
 # AppAttest
 
 A simple authentication node for ForgeRock's [Identity Platform][forgerock_platform] 7.2.0 and above. 
-This node implements Apple's iOS App Attestation. https://developer.apple.com/documentation/devicecheck
-The attastation checking logic uses the App Attestation library by Vincent Haupert [https://github.com/veehaitch/devicecheck-appattest/tree/v0.9.4](https://github.com/veehaitch/devicecheck-appattest/tree/v0.9.4) (Apache License 2.0)
+
+This node implements Apple's iOS App Attestation. [https://developer.apple.com/documentation/devicecheck](https://developer.apple.com/documentation/devicecheck)
+
+The attestation verification logic uses the App Attestation library by Vincent Haupert [https://github.com/veehaitch/devicecheck-appattest/tree/v0.9.4](https://github.com/veehaitch/devicecheck-appattest/tree/v0.9.4) (Apache License 2.0)
 
 **USAGE**
 
@@ -35,7 +37,7 @@ The attastation checking logic uses the App Attestation library by Vincent Haupe
 
 The code in this repository has binary dependencies that live in the ForgeRock maven repository. Maven can be configured to authenticate to this repository by following the following [ForgeRock Knowledge Base Article](https://backstage.forgerock.com/knowledge/kb/article/a74096897).
 
-**SPECIFIC BUILD INSTRUCTIONS HERE**
+**DEPENDENCIES**
 
 The below are needed in `<catalina_home>/webapps/<context_root>/WEB-INF/lib`:
 
@@ -61,7 +63,7 @@ bcmail-jdk15on-1.70.jar
 
 All the above jar files are available in Maven Central, see their artifact IDs in `pom.xml`.
 
-**Sample authentication tree**
+**SAMPLE AUTHENTICATION TREE**
 
 ![ScreenShot](./example.png)
 
