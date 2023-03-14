@@ -21,14 +21,13 @@
  */
 
 
-package hu.dpc.fr.appattestnode;
+package hu.dpc.fr.integritycheck;
 
 import static ch.veehait.devicecheck.appattest.common.AppleAppAttestEnvironment.DEVELOPMENT;
 import static ch.veehait.devicecheck.appattest.common.AppleAppAttestEnvironment.PRODUCTION;
 import static java.util.stream.Collectors.toMap;
 import static org.forgerock.json.JsonValue.*;
 import static org.forgerock.openam.auth.node.api.Action.send;
-//import static org.forgerock.openam.auth.node.api.AbstractDecisionNode.goTo;
 
 import java.util.*;
 
@@ -38,6 +37,7 @@ import javax.security.auth.callback.Callback;
 import ch.veehait.devicecheck.appattest.common.AppleAppAttestEnvironment;
 import com.sun.identity.authentication.callbacks.HiddenValueCallback;
 import com.sun.identity.authentication.spi.MetadataCallback;
+import hu.dpc.fr.integritycheck.util.AppAttestEnvironment;
 import org.forgerock.openam.annotations.sm.Attribute;
 import org.forgerock.openam.auth.node.api.AbstractDecisionNode;
 import org.forgerock.openam.auth.node.api.Action;
@@ -55,7 +55,6 @@ import ch.veehait.devicecheck.appattest.AppleAppAttest;
 import ch.veehait.devicecheck.appattest.common.App;
 import ch.veehait.devicecheck.appattest.attestation.ValidatedAttestation;
 import ch.veehait.devicecheck.appattest.attestation.AttestationValidator;
-
 
 /**
  * A node that implements Apple iOS App Attest server-side tasks as part of an authentication tree.
@@ -93,8 +92,8 @@ public class AppAttest extends AbstractDecisionNode {
          * DEVELOPMENT OR PRODUCTION
          */
         @Attribute(order = 300)
-        default String environment() {
-            return "DEVELOPMENT";
+        default AppAttestEnvironment environment() {
+            return AppAttestEnvironment.DEVELOPMENT;
         }
     }
 

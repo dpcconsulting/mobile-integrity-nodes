@@ -14,19 +14,16 @@
  * Copyright 2017-2019 ForgeRock AS.
  */
 
-package hu.dpc.fr.appattestnode;
-
-import java.util.Collections;
-import java.util.Map;
-
-import javax.inject.Inject;
+package hu.dpc.fr.integritycheck;
 
 import org.forgerock.openam.auth.node.api.AbstractNodeAmPlugin;
 import org.forgerock.openam.auth.node.api.Node;
 import org.forgerock.openam.plugins.PluginException;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Definition of an <a href="https://backstage.forgerock.com/docs/am/6/apidocs/org/forgerock/openam/auth/node/api/AbstractNodeAmPlugin.html">AbstractNodeAmPlugin</a>. 
@@ -60,7 +57,7 @@ import org.slf4j.LoggerFactory;
  */
 public class AppAttestPlugin extends AbstractNodeAmPlugin {
 
-	static private String currentVersion = "1.0.0";
+	static private String currentVersion = "1.1.0";
 	
     /** 
      * Specify the Map of list of node classes that the plugin is providing. These will then be installed and
@@ -70,7 +67,7 @@ public class AppAttestPlugin extends AbstractNodeAmPlugin {
      */
 	@Override
 	protected Map<String, Iterable<? extends Class<? extends Node>>> getNodesByVersion() {
-		return Collections.singletonMap(AppAttestPlugin.currentVersion, 
+		return Collections.singletonMap(AppAttestPlugin.currentVersion,
 				Collections.singletonList(AppAttest.class));
 	}
 
