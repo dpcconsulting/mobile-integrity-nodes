@@ -24,7 +24,8 @@
 Two simple authentication nodes for ForgeRock's [Identity Platform][forgerock_platform] 7.2.0 and above. 
 One node implements Apple's iOS App Attestation. https://developer.apple.com/documentation/devicecheck
 The attestation checking logic uses the App Attestation library by Vincent Haupert [https://github.com/veehaitch/devicecheck-appattest/tree/v0.9.4](https://github.com/veehaitch/devicecheck-appattest/tree/v0.9.4) (Apache License 2.0)
-The other one is using Google Play Integrity to check the Android app.
+
+The other one is using Google Play Integrity to check the Android app. https://developer.android.com/google/play/integrity/overview
 
 
 **BUILDING INSTRUCTIONS**
