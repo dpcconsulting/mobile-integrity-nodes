@@ -12,7 +12,7 @@
  * Header, with the fields enclosed by brackets [] replaced by your own identifying
  * information: "Portions copyright [year] [name of copyright owner]".
  *
- * Copyright 2017-2020 ForgeRock AS.
+ * Copyright 2017-2023 ForgeRock AS.
  *
  * Portions Copyright 2023 DPC Consulting Kft
  *
@@ -109,7 +109,7 @@
             </snapshots>
             <id>forgerock-private-releases</id>
             <name>ForgeRock Private Release Repository</name>
-            <url>https://maven.forgerock.org/repo/private-releases</url>
+            <url>https://maven.forgerock.org/artifactory/private-releases</url>
         </repository>
     </repositories>
 
